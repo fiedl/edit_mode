@@ -5,6 +5,7 @@ group :test, :development do
 end
 
 gem 'jquery-rails'
+gem 'coffee-rails'
 
 # Specify your gem's dependencies in edit_mode.gemspec
 gemspec

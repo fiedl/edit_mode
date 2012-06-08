@@ -7,6 +7,10 @@ The edit mode is activated by pressing an 'edit' button on a show view. This sho
 and switches on the best_in_place form fields. When editing is finished, use 'save' or 'cancel' buttons to quit the edit mode and ret\
 urn to a normal show view. Several editing groups per page are supported. Thus, you can have several 'boxes' to edit on a page.
 
+## Demo
+
+You might want to have a look at [this demo app at heroku](http://edit-mode-test-app.herokuapp.com/).
+
 ## Installation
 
 THIS IS NOT READY, YET.

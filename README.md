@@ -1,8 +1,19 @@
 # EditMode
 
-TODO: Write a gem description
+Toggle an edit mode on a normal show view. Think of it as a grouped in-place editing. 
+This also toggles [best_in_place](https://github.com/bernat/best_in_place) fields.
+
+The edit mode is activated by pressing an 'edit' button on a show view. This shows additional editing tools \
+and switches on the best_in_place form fields. When editing is finished, use 'save' or 'cancel' buttons to quit the edit mode and ret\
+urn to a normal show view. Several editing groups per page are supported. Thus, you can have several 'boxes' to edit on a page.
+
+## Demo
+
+You might want to have a look at [this demo app at heroku](http://edit-mode-test-app.herokuapp.com/).
 
 ## Installation
+
+THIS IS NOT READY, YET.
 
 Add this line to your application's Gemfile:
 
@@ -16,9 +27,16 @@ Or install it yourself as:
 
     $ gem install edit_mode
 
+TODO: Include css and js.
+
 ## Usage
 
-TODO: Write usage instructions here
+* Basic view
+* edit_mode_group
+* tool buttons
+* show_only_in_edit_mode, do_not_show_in_edit_mode
+* best_in_place
+* editable: edit, save, cancel
 
 ## Contributing
 
@@ -27,3 +45,4 @@ TODO: Write usage instructions here
 3. Commit your changes (`git commit -am 'Added some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+

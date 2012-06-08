@@ -27,7 +27,10 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(params[:user])
-      redirect_to @user, :notice  => "Successfully updated user."
+      respond_to do |format|
+        format.json { respond_with_bip( @user ) }
+        format.html { redirect_to @user, :notice  => "Successfully updated user." }
+      end
     else
       render :action => 'edit'
     end

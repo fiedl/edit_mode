@@ -3,6 +3,7 @@ jQuery ->
   $( ".best_in_place" ).best_in_place()
                        .addClass( "editable ")
                        .bind( "edit", ->
+                         alert( "activated" )
                          $( this ).data( 'bestInPlaceEditor' ).activate()
                          $( this ).find( "*" ).unbind( 'blur' )
                                               .unbind( 'click' )
@@ -19,7 +20,7 @@ jQuery ->
 
   keyUpHandler = (event) ->
     if event.keyCode == 27
-      $( this ).closest( ".box" ).trigger( "cancel" )
+      $( this ).closest( ".edit_mode_group" ).trigger( "cancel" )
     if event.keyCode == 13
       unless $( event.target ).is( "textarea" )
-        $( this ).closest( ".box" ).trigger( "save" )
+        $( this ).closest( ".edit_mode_group" ).trigger( "save" )

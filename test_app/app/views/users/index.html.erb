@@ -1,0 +1,29 @@
+<% title "Users" %>
+
+<p>
+  This demo app shows how <a href="https://github.com/fiedl/edit_mode" target="_blank">edit_mode</a> looks like.
+</p>
+<p>
+  Just go to the 'show' page of a user and edit his profile there. (If no user exists, you will have to create one first.)
+</p>
+
+
+<table>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Date Of Birth</th>
+  </tr>
+  <% for user in @users %>
+    <tr>
+      <td><%= user.first_name %></td>
+      <td><%= user.last_name %></td>
+      <td><%= user.date_of_birth %></td>
+      <td><%= link_to "Show", user %></td>
+      <td><%= link_to "Edit", edit_user_path(user) %></td>
+      <td><%= link_to "Destroy", user, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New User", new_user_path %></p>

@@ -1,0 +1,50 @@
+<% title "User: " + @user.first_name + " " + @user.last_name %>
+
+<p>
+  You can either click on the information to directly edit them via <a href="https://github.com/bernat/best_in_place" target="_blank">best_in_place</a>, or you can use the 'edit' links to activate the edit mode.
+</p>
+
+<div class="edit_mode_group">
+  <span class="edit_mode_tools">
+    <a class="edit_button" href="#">edit</a>
+    <a class="cancel_button" href="#">cancel</a>
+    <a class="save_button" href="#">save</a>
+  </span>
+
+  <h2>Basic Information</h2>
+  <p>
+    <strong>First Name:</strong>
+    <%= best_in_place @user, :first_name %>
+  </p>
+  <p>
+    <strong>Last Name:</strong>
+    <%= best_in_place @user, :last_name %>
+  </p>
+</div>
+
+<div class="edit_mode_group">
+  <span class="edit_mode_tools">
+    <a class="edit_button" href="#">edit</a>
+    <a class="cancel_button" href="#">cancel</a>
+    <a class="save_button" href="#">save</a>
+  </span>
+
+  <h2>Additional Information</h2>
+  <p>
+    <strong>Date Of Birth:</strong>
+    <%= best_in_place @user, :date_of_birth %>
+    <span class="show_only_in_edit_mode"><a href="#" title="this link does not do anything in this demo.">delete</a></span>
+  </p>
+  <span class="show_only_in_edit_mode">
+    <a href="#" title="this link does not do anything in this demo.">add</a>
+  </span>
+</div>
+
+<p class="global_tools">
+  <!--
+    <%= link_to "Edit", edit_user_path(@user) %> |
+    <%= link_to "Destroy", @user, :confirm => 'Are you sure?', :method => :delete %> |
+  -->
+  <%= link_to "View All Users", users_path %>
+</p>
+

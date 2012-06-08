@@ -15,12 +15,13 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platform => :ruby
+  gem 'therubyracer', :platform => :ruby
 
   gem 'uglifier', '>= 1.0.3'
 end
 
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 
 group :development do
   gem 'nifty-generators'
@@ -40,3 +41,11 @@ end
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
+gem "mocha", :group => :test
+
+# Edit Mode (This is the gem to demonstrate here.)
+gem 'edit_mode', path: '../'
+
+# In-place editing (To show that this gem integrates best_in_place out of the box.)
+gem 'best_in_place'

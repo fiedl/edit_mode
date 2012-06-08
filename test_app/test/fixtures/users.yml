@@ -1,0 +1,9 @@
+one:
+  first_name: MyString
+  last_name: MyString
+  date_of_birth: 2012-06-08
+
+two:
+  first_name: MyString
+  last_name: MyString
+  date_of_birth: 2012-06-08

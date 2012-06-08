@@ -8,15 +8,21 @@ group :test, :development do
   gem 'rspec-core'
   gem 'rspec-expectations'
   gem 'rspec-mocks'
-  gem 'rspec-rails', ">= 2.0"
   gem 'nokogiri'
-  gem 'guard-rspec'
   gem 'capybara'
+  gem 'execjs'
+  gem 'therubyracer', :platform => :ruby
+
+  gem 'guard', '1.0.1'
+  gem 'rspec-rails', '2.10.0'
+  gem 'guard-rspec', '0.5.5'
+
 end
 
-gem 'execjs'
-gem 'therubyracer', :platform => :ruby
-
+group :test do
+  gem 'best_in_place'
+  gem 'sass-rails'
+end
 
 gem 'jquery-rails'
 gem 'coffee-rails'

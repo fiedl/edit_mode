@@ -26,6 +26,6 @@ Gem::Specification.new do |gem|
   
   gem.add_development_dependency "rspec-rails", ">= 2.8.0"
   gem.add_development_dependency "nokogiri", ">= 1.5.0"
-#  gem.add_development_dependency "capybara"
+  gem.add_development_dependency "capybara"
   
 end

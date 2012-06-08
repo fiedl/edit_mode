@@ -5,7 +5,12 @@ gem 'rails', '3.2.3'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+group :development, :test do
+  gem 'sqlite3'
+end
+group :production do
+  gem 'pg'
+end
 
 
 # Gems used only for assets and not required
@@ -45,7 +50,7 @@ end
 gem "mocha", :group => :test
 
 # Edit Mode (This is the gem to demonstrate here.)
-gem 'edit_mode', path: '../'
+gem 'edit_mode', git: 'git://github.com/fiedl/edit_mode.git'
 
 # In-place editing (To show that this gem integrates best_in_place out of the box.)
 gem 'best_in_place'

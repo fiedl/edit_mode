@@ -5,7 +5,12 @@ gem 'rails', '3.2.3'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+group :development, :test do
+  gem 'sqlite3'
+end
+group :production do
+  gem 'pg'
+end
 
 
 # Gems used only for assets and not required
@@ -15,12 +20,17 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platform => :ruby
+  gem 'therubyracer', :platform => :ruby
 
   gem 'uglifier', '>= 1.0.3'
 end
 
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
+
+group :development do
+  gem 'nifty-generators'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -36,3 +46,11 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
+gem "mocha", :group => :test
+
+# Edit Mode (This is the gem to demonstrate here.)
+gem 'edit_mode', path: '../'
+
+# In-place editing (To show that this gem integrates best_in_place out of the box.)
+gem 'best_in_place'

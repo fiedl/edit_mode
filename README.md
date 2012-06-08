@@ -3,6 +3,10 @@
 Toggle an edit mode on a normal show view. Think of it as a grouped in-place editing. 
 This also toggles [best_in_place](https://github.com/bernat/best_in_place) fields.
 
+The edit mode is activated by pressing an 'edit' button on a show view. This shows additional editing tools \
+and switches on the best_in_place form fields. When editing is finished, use 'save' or 'cancel' buttons to quit the edit mode and ret\
+urn to a normal show view. Several editing groups per page are supported. Thus, you can have several 'boxes' to edit on a page.
+
 ## Installation
 
 THIS IS NOT READY, YET.

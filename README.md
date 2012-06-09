@@ -31,6 +31,16 @@ Or install it yourself as:
 
 TODO: Include css and js.
 
+### Include Assets
+
+In `app/assets/javascripts/application.js`, add:
+
+    //= require edit_mode
+	
+In `app/assets/stylesheets/application.css`, add:
+
+    //= require edit_mode
+
 ## Usage
 
 ### Basic View

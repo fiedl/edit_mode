@@ -1,4 +1,4 @@
-# EditMode
+# EditMode  [![Build Status](https://secure.travis-ci.org/fiedl/edit_mode.png?branch=master)](http://travis-ci.org/fiedl/edit_mode)
 
 <img src="https://github.com/fiedl/edit_mode/raw/master/test_app/app/assets/images/screenshot.png" height="300" align="right" vspace="20" hspace="20" />
 

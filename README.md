@@ -125,6 +125,10 @@ jQuery ->
   )
 ```
 
+## Documentation
+
+http://rubydoc.info/github/fiedl/edit_mode/frames
+
 ## Contributing
 
 1. Fork it

@@ -19,8 +19,6 @@ The [code of this demo app can be found here](https://github.com/fiedl/edit_mode
 
 ## Installation
 
-THIS IS NOT READY, YET.
-
 Add this line to your application's Gemfile:
 
     gem 'edit_mode'
@@ -32,8 +30,6 @@ And then execute:
 Or install it yourself as:
 
     $ gem install edit_mode
-
-TODO: Include css and js.
 
 ### Include Assets
 

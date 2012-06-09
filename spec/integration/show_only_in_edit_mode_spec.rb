@@ -3,7 +3,9 @@ require 'spec_helper'
 describe "show only in edit mode span tags", js: true do
 
   before do
-    visit user_path( User.first )
+    @user = User.new( first_name: "John", last_name: "Doe", date_of_birth: "1995-12-21" )
+    @user.save
+    visit user_path( @user )
   end
 
   it "should not be visible when not in edit mode" do

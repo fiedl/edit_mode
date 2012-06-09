@@ -1,5 +1,7 @@
 # EditMode
 
+<img src="https://github.com/fiedl/edit_mode/raw/master/test_app/app/assets/images/screenshot.png" height="300" align="right" vspace="20" hspace="20" />
+
 Toggle an edit mode on a normal show view. Think of it as a grouped in-place editing. 
 This also toggles [best_in_place](https://github.com/bernat/best_in_place) fields.
 

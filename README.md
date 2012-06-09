@@ -35,11 +35,18 @@ TODO: Include css and js.
 
 In `app/assets/javascripts/application.js`, add:
 
-    //= require edit_mode
+```javascript
+//= require edit_mode
+```
 	
 In `app/assets/stylesheets/application.css`, add:
 
-    //= require edit_mode
+```css
+/*
+ *...
+ *= require edit_mode
+ */
+```
 
 ## Usage
 
@@ -57,32 +64,38 @@ You can also have several edit_mode_group spans on a page, as shown in the demo 
 
 To enter and exit the edit mode, use buttons 'edit', 'save' and 'cancel'. These can be anchors, images, et cetera. They only have to have the correct css classes: 
 
-    <span class="edit_mode_group">
-      <a class="edit_button" href="#">edit</a>
-  	  <a class="save_button" href="#">save</a>
-      <a class="cancel_button" href="#">cancel</a>
-	  ...
-	</span>
+```html
+<span class="edit_mode_group">
+  <a class="edit_button" href="#">edit</a>
+  <a class="save_button" href="#">save</a>
+  <a class="cancel_button" href="#">cancel</a>
+  ...
+</span>
+```
 
 ### show_only_in_edit_mode
 
 Within the edit_mode_group span, you may place certain elements that should only be shown when in edit mode. You can use this for 'add' buttons or 'destroy' buttons.
 
-    <span class="edit_mode_group">
-	  ...
-	  <span class="show_only_in_edit_mode">
-	    <a href="#">add</a>
-	  </span>
-	</span>
-	
+```html
+<span class="edit_mode_group">
+  ...
+  <span class="show_only_in_edit_mode">
+    <a href="#">add</a>
+  </span>
+</span>
+```
+
 The same, the other way round:
 
-    <span class="edit_mode_group">
-	  ...
-	  <span class="do_not_show_in_edit_mode">
-	    <img src="..." alt="This picture is not shown in edit mode." />
-	  </span>
-	</span>
+```html
+<span class="edit_mode_group">
+  ...
+  <span class="do_not_show_in_edit_mode">
+    <img src="..." alt="This picture is not shown in edit mode." />
+  </span>
+</span>
+```
 
 ### best_in_place
 
@@ -92,17 +105,21 @@ In the edit_mode_group span, all [best_in_place](https://github.com/bernat/best_
 
 If you need custom behaviour inside the edit_mode_group span, you can use these triggers: For all elements of the class `.editable`, the events `edit`, `save` and `cancel` are triggered, when entering or exiting edit mode.
 
-    <span class="edit_mode_group">
-	  ...
-      <span class="editable custom_element">Test</span>
-	</span>
+```html
+<span class="edit_mode_group">
+  ...
+  <span class="editable custom_element">Test</span>
+</span>
+```
 
 Bind the event via JavaScript, e.g. with jQuery:
 
-    jQuery ->
-	  $( ".custom_element" ).bind( "edit", ->
-	    alert( "This element has just entered edit mode." )
-      )
+```coffee
+jQuery ->
+  $( ".custom_element" ).bind( "edit", ->
+    alert( "This element has just entered edit mode." )
+  )
+```
 
 ## Contributing
 

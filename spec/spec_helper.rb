@@ -1,6 +1,9 @@
 
 ENV["RAILS_ENV"] = "test"
 
+ActiveRecord::Base.establish_connection :adapter => 'sqlite3',
+                                        :database => ':memory:'
+
 require File.expand_path('../../test_app/config/environment', __FILE__)
 
 require "rspec/rails"

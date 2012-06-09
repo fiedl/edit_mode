@@ -15,7 +15,6 @@ development:
 test:
   adapter: sqlite3
   database: ":memory:"
-  pool: 5
   timeout: 500
 
 production:

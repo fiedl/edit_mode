@@ -9,13 +9,16 @@ jQuery ->
   $( ".edit_button" ).addClass( "do_not_show_in_edit_mode editable" )
 
   # The buttons trigger the correspondig events of the surrounding edit_mode_group.
-  $( ".edit_button" ).click ( ->
+  $( ".edit_button" ).click ( (e) ->
     $( this ).closest( ".edit_mode_group" ).trigger( "edit" )
+    e.preventDefault()
   )
-  $( ".save_button" ).click( ->
+  $( ".save_button" ).click( (e) ->
     $( this ).closest( ".edit_mode_group" ).trigger( "save" )
+    e.preventDefault()
   )
-  $( ".cancel_button" ).click( ->
+  $( ".cancel_button" ).click( (e) ->
     $( this ).closest( ".edit_mode_group" ).trigger( "cancel" )
+    e.preventDefault()
   )
 

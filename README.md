@@ -121,6 +121,25 @@ jQuery ->
   )
 ```
 
+### Adding .editable Elements Using Ajax
+
+If you would like to add .editable elements (e.g. `.best_in_place` elements or `.show_only_in_edit_mode` elements) using
+ajax, you have to call `apply_edit_mode()` on the newly added elements in order to have them provide the proper methods
+and triggers.
+
+For example, if you have added a `<span id="my_new_edit_mode_span">...</span>` containing
+the edit_mode elements using ajax, just call via javascript (jQuery):
+    
+```javascript
+$( "#my_new_edit_mode_span" ).apply_edit_mode()
+```    
+
+And if you want to enter edit_mode for this span, call instead:
+    
+```javascript
+$( "#my_new_edit_mode_span" ).apply_edit_mode().trigger( "edit" )
+```
+
 ## Documentation
 
 http://rubydoc.info/github/fiedl/edit_mode/frames

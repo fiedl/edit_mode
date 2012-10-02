@@ -4,8 +4,7 @@ jQuery ->
   # The <span class="edit_mode_group"></span> elements receive 'edit', 'save' and 'cancel' events,
   # when the user clicks the corresponding buttons '.edit_button', '.save_button' or '.cancel_button'.
   # The edit_mode_group has to pass these events down to the contained .editable elements.
-  $( ".edit_mode_group" ).bind( "edit", ->
-
+  $( ".edit_mode_group" ).bind( "edit", (e) ->
     unless $( this ).hasClass( "currently_in_edit_mode" )
       $( this ).addClass( "currently_in_edit_mode" )
 

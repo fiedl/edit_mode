@@ -16,13 +16,15 @@ group :test, :development do
   gem 'guard', '1.0.1'
   gem 'rspec-rails', '2.10.0'
   gem 'guard-rspec', '0.5.5'
-  gem 'poltergeist'
+#  gem 'poltergeist'
 #  gem 'selenium-webdriver' '>=2.27.2'
+  gem 'capybara-webkit'
 end
 
 group :test do
-  gem 'best_in_place'
   gem 'sass-rails'
+#  gem 'best_in_place', path: "../best_in_place"
+  gem 'best_in_place', git: "https://github.com/bernat/best_in_place.git"
 end
 
 gem 'jquery-rails', '>=2.2.0'

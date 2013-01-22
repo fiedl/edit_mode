@@ -8,6 +8,25 @@ describe "button behaviour", js: true do
     visit user_path( @user )
   end
 
+  describe "javascript requirements: " do
+    describe "edit event" do
+      describe "on a best_in_place element" do
+        it "should show the input field for editing" do
+          page.should_not have_selector "input"
+          page.execute_script( " $('.best_in_place.editable:first').trigger('edit') " )
+          page.should have_selector( "input", count: 1 )
+        end
+      end
+      describe "on an edit_mode_group" do
+        it "should show the input fields for all contained best_in_place fields" do
+          page.should_not have_selector "input"
+          page.execute_script( " $('.edit_mode_group:first').trigger('edit') " )
+          page.should have_selector( "input", count: 2 )
+        end
+      end
+    end
+  end
+
   describe "edit button" do
 
     it "should be visible outside and invisible in edit mode" do

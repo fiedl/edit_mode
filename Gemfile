@@ -16,7 +16,8 @@ group :test, :development do
   gem 'guard', '1.0.1'
   gem 'rspec-rails', '2.10.0'
   gem 'guard-rspec', '0.5.5'
-
+  gem 'poltergeist'
+#  gem 'selenium-webdriver' '>=2.27.2'
 end
 
 group :test do
@@ -24,6 +25,6 @@ group :test do
   gem 'sass-rails'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', '>=2.2.0'
 gem 'coffee-rails'
 gem 'sqlite3'

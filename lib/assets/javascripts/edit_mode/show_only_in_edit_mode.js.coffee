@@ -7,16 +7,19 @@ jQuery ->
     # When edit mode is left, the events 'save' or 'cancel' are triggered.
     # For <span class="show_only_in_edit_mode"></span> tags, these events are rather simple:
     # Just show or hide these spans!
-    this.find( ".show_only_in_edit_mode" ).live( "edit", ->
+
+    this.on( 'edit', '.show_only_in_edit_mode', ->
       $( this ).show()
-    ).live( "save cancel", ->
+    )
+    this.on( 'save cancel', '.show_only_in_edit_mode', ->
       $( this ).hide()
     )
 
     # And just the opposite for <span class="do_not_show_in_edit_mode"></span>.
-    this.find( ".do_not_show_in_edit_mode" ).live( "edit", ->
+    this.on( 'edit', '.do_not_show_in_edit_mode', ->
       $( this ).hide()
-    ).live( "save cancel", ->
+    )
+    this.on( 'save cancel', '.do_not_show_in_edit_mode', ->
       $( this ).show()
     )
 

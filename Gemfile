@@ -9,7 +9,7 @@ group :test, :development do
   gem 'rspec-expectations'
   gem 'rspec-mocks'
   gem 'nokogiri'
-  gem 'capybara'
+  gem 'capybara', '1.1.2'
   gem 'execjs'
   gem 'therubyracer', :platform => :ruby
 

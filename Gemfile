@@ -28,5 +28,7 @@ group :test do
 end
 
 gem 'jquery-rails', '>=2.2.0'
+gem 'jquery-ui-rails'
+
 gem 'coffee-rails'
 gem 'sqlite3'

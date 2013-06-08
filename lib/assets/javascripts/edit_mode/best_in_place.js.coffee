@@ -1,4 +1,4 @@
-jQuery ->
+ready = ->
 
   jQuery.fn.apply_best_in_place = ->
     this.best_in_place()
@@ -31,3 +31,5 @@ jQuery ->
       unless $( event.target ).is( "textarea" )
         $( this ).closest( ".edit_mode_group" ).trigger( "save" )
 
+$(document).ready(ready)
+$(document).on('page:load', ready)

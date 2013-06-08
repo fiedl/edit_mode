@@ -1,5 +1,5 @@
 
-jQuery ->
+ready = ->
 
   jQuery.fn.apply_show_only_in_edit_mode = ->
 
@@ -30,3 +30,6 @@ jQuery ->
 
   # Apply this to the whole document in the beginning.
   $( document ).apply_show_only_in_edit_mode()
+
+$(document).ready(ready)
+$(document).on('page:load', ready)

@@ -1,5 +1,5 @@
 
-jQuery ->
+ready = ->
 
   jQuery.fn.apply_initial_auto_hide = ->
 
@@ -11,3 +11,6 @@ jQuery ->
     return this
 
   $( document ).apply_initial_auto_hide()
+
+$(document).ready(ready)
+$(document).on('page:load', ready)

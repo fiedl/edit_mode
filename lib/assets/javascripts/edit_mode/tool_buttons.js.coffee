@@ -1,5 +1,5 @@
 
-jQuery ->
+ready = ->
 
   # The 'save' and the 'cancel' button are only to be shown in edit mode.
   # In order to receive the proper 'edit', 'save', 'cancel' events, they also have to be .editable.
@@ -22,3 +22,5 @@ jQuery ->
     e.preventDefault()
   )
 
+$(document).ready(ready)
+$(document).on('page:load', ready)

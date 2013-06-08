@@ -1,5 +1,5 @@
 
-jQuery ->
+ready = ->
 
   # The <span class="edit_mode_group"></span> elements should be modal when in edit mode.
   # That means that everything else should be greyed out.
@@ -26,3 +26,6 @@ jQuery ->
           )
         , 300 )
   )
+
+$(document).ready(ready)
+$(document).on('page:load', ready)

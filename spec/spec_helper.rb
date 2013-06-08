@@ -7,13 +7,14 @@ require File.expand_path('../../test_app/config/environment', __FILE__)
 require "rspec/rails"
 require "nokogiri"
 
-Capybara.javascript_driver = :selenium
+#Capybara.javascript_driver = :selenium
 #Capybara.javascript_driver = :webkit
 
-# changing back to selenium-webdriver, since phantom js (poltergeist) keeps crashing.
-# SF 2013-01-21
-#require 'capybara/poltergeist'
-#Capybara.javascript_driver = :poltergeist
+
+# use at least phantomjs version 1.8.2
+require 'capybara/poltergeist'
+Capybara.javascript_driver = :poltergeist
+
 
 # Load support files
 #Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each{|f| require f}

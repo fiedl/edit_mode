@@ -1,5 +1,5 @@
 
-jQuery ->
+ready = ->
 
   # The <span class="edit_mode_group"></span> elements receive 'edit', 'save' and 'cancel' events,
   # when the user clicks the corresponding buttons '.edit_button', '.save_button' or '.cancel_button'.
@@ -36,7 +36,9 @@ jQuery ->
 
   )
 
-
-
   button_effect = ( button, callback ) ->
     button.effect( "pulsate", { times: 2 }, "fast", callback )
+
+
+$(document).ready(ready)
+$(document).on('page:load', ready)

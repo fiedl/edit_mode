@@ -6,23 +6,23 @@ ready = ->
   # If the user clicks on the shaded (grey) area outside, the edit_mode_group is saved.
 
   $( ".edit_mode_group" ).bind( "edit", ->
-    unless $( this ).hasClass( "modal" )
+    unless $( this ).hasClass( "edit-mode-modal" )
       modal_edit_mode_group = $( this )
-      $( this ).addClass( "modal" )
-      $( "body" ).append( "<div class='modal_bg'></div>" )
-      $( "div.modal_bg" ).hide().fadeIn().click( ->
+      $( this ).addClass( "edit-mode-modal" )
+      $( "body" ).append( "<div class='edit-mode-modal-bg'></div>" )
+      $( "div.edit-mode-modal-bg" ).hide().fadeIn().click( ->
         modal_edit_mode_group.trigger( "save" )
       )
   )
 
   $( ".edit_mode_group" ).bind( "save cancel", ->
-    if $( this ).hasClass( "modal" )
+    if $( this ).hasClass( "edit-mode-modal" )
       unless $( this ).hasClass( "animating" )
         $( this ).addClass( "animating" )
         setTimeout( ->
-          $( "div.modal_bg" ).fadeOut( ->
+          $( "div.edit-mode-modal-bg" ).fadeOut( ->
             $( this ).remove()
-            $( ".modal" ).removeClass( "modal animating" )
+            $( ".edit-mode-modal" ).removeClass( "edit-mode-modal animating" )
           )
         , 300 )
   )

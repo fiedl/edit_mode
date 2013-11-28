@@ -6,7 +6,8 @@ ready = ->
   # If the user clicks on the shaded (grey) area outside, the edit_mode_group is saved.
 
   $( document ).on( "edit", ".edit_mode_group", ->
-    unless $( this ).hasClass( "edit-mode-modal" )
+    if $( document ).find( ".edit-mode-modal" ).size() == 0
+      #unless $( this ).hasClass( "edit-mode-modal" )
       modal_edit_mode_group = $( this )
       $( this ).addClass( "edit-mode-modal" )
       $( "body" ).append( "<div class='edit-mode-modal-bg'></div>" )

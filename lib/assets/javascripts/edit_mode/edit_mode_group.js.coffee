@@ -30,9 +30,17 @@ ready = ->
       $( this ).removeClass( "currently_in_edit_mode" )
 
       edit_mode_group = $( this )
-      button_effect( $( this ).find( ".cancel_button" ), ->
+      cancel_button = $( this ).find( ".cancel_button" )
+      
+      # if there is a cancel button, animate it and then cancel all elements.
+      if cancel_button.size() > 0  
+        button_effect( cancel_button, ->
+          edit_mode_group.find( ".editable" ).trigger( "cancel" )
+        )
+        
+      # if no cancel button exists, just trigger each element's cancel event.
+      else  
         edit_mode_group.find( ".editable" ).trigger( "cancel" )
-      )
 
   )
 

@@ -5,7 +5,7 @@ ready = ->
   # That means that everything else should be greyed out.
   # If the user clicks on the shaded (grey) area outside, the edit_mode_group is saved.
 
-  $( ".edit_mode_group" ).bind( "edit", ->
+  $( document ).on( "edit", ".edit_mode_group", ->
     unless $( this ).hasClass( "edit-mode-modal" )
       modal_edit_mode_group = $( this )
       $( this ).addClass( "edit-mode-modal" )
@@ -15,7 +15,7 @@ ready = ->
       )
   )
 
-  $( ".edit_mode_group" ).bind( "save cancel", ->
+  $( document ).on( "save cancel", ".edit_mode_group", ->
     if $( this ).hasClass( "edit-mode-modal" )
       unless $( this ).hasClass( "animating" )
         $( this ).addClass( "animating" )

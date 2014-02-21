@@ -140,6 +140,10 @@ And if you want to enter edit_mode for this span, call instead:
 $( "#my_new_edit_mode_span" ).apply_edit_mode().trigger( "edit" )
 ```
 
+### Deactivating the Modal
+
+If you do not want the edit mode span to get modal when entering the edit mode, have a look at [the solution to issue #2](https://github.com/fiedl/edit_mode/issues/2).
+
 ## Documentation
 
 http://rubydoc.info/github/fiedl/edit_mode/frames

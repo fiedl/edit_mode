@@ -2,13 +2,13 @@
 
 <img src="https://github.com/fiedl/edit_mode/raw/master/test_app/app/assets/images/screenshot.png" height="300" align="right" vspace="20" hspace="20" />
 
-*edit_mode* is a *ruby on rails gem* that allows you to toggle an edit mode on a normal show view. 
-Think of it as a grouped in-place editing. 
+*edit_mode* is a *ruby on rails gem* that allows you to toggle an edit mode on a normal show view.
+Think of it as a grouped in-place editing.
 This also toggles [best_in_place](https://github.com/bernat/best_in_place) fields.
 
-The edit mode is activated by pressing an 'edit' button on a show view. This shows additional editing tools 
-and switches on the best_in_place form fields. When editing is finished, use 'save' or 'cancel' buttons to 
-quit the edit mode and return to a normal show view. 
+The edit mode is activated by pressing an 'edit' button on a show view. This shows additional editing tools
+and switches on the best_in_place form fields. When editing is finished, use 'save' or 'cancel' buttons to
+quit the edit mode and return to a normal show view.
 Several editing groups per page are supported. Thus, you can have several 'boxes' to edit on a page.
 
 ## Demo
@@ -38,7 +38,7 @@ In `app/assets/javascripts/application.js`, add:
 ```javascript
 //= require edit_mode
 ```
-	
+
 In `app/assets/stylesheets/application.css`, add:
 
 ```css
@@ -62,7 +62,7 @@ You can also have several edit_mode_group spans on a page, as shown in the demo 
 
 ### Tool Buttons
 
-To enter and exit the edit mode, use buttons 'edit', 'save' and 'cancel'. These can be anchors, images, et cetera. They only have to have the correct css classes: 
+To enter and exit the edit mode, use buttons 'edit', 'save' and 'cancel'. These can be anchors, images, et cetera. They only have to have the correct css classes:
 
 ```html
 <span class="edit_mode_group">
@@ -129,13 +129,13 @@ and triggers.
 
 For example, if you have added a `<span id="my_new_edit_mode_span">...</span>` containing
 the edit_mode elements using ajax, just call via javascript (jQuery):
-    
+
 ```javascript
 $( "#my_new_edit_mode_span" ).apply_edit_mode()
-```    
+```
 
 And if you want to enter edit_mode for this span, call instead:
-    
+
 ```javascript
 $( "#my_new_edit_mode_span" ).apply_edit_mode().trigger( "edit" )
 ```
@@ -148,6 +148,16 @@ If you do not want the edit mode span to get modal when entering the edit mode, 
 
 http://rubydoc.info/github/fiedl/edit_mode/frames
 
+## Demo App
+
+* http://edit-mode-test-app.herokuapp.com/
+* https://github.com/fiedl/edit_mode/tree/master/test_app
+* Add heroku remote to git: http://stackoverflow.com/questions/5129598
+  * `brew install heroku-toolbelt`
+  * `heroku keys:add`
+  * `heroku git:remote -a edit-mode-test-app`
+* Push test app to heroku: `git subtree push --prefix test_app heroku master` or `git push heroku \`git subtree split --prefix test_app master\`:master --force` ([SO](http://stackoverflow.com/a/10648623/2066546))
+
 ## Contributing
 
 1. Fork it
@@ -155,6 +165,3 @@ http://rubydoc.info/github/fiedl/edit_mode/frames
 3. Commit your changes (`git commit -am 'Added some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
-
-
-

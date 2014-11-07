@@ -33,6 +33,17 @@
     <a class="save_button" href="#">save</a>
   </span>
 
+  <h2>Markdown Description</h2>
+  <%= best_in_place @user, :description, display_with: :markdown, type: :textarea %>
+</div>
+
+<div class="edit_mode_group">
+  <span class="edit_mode_tools">
+    <a class="edit_button" href="#">edit</a>
+    <a class="cancel_button" href="#">cancel</a>
+    <a class="save_button" href="#">save</a>
+  </span>
+
   <h2>Additional Information</h2>
   <p>
     <strong>Date Of Birth:</strong>

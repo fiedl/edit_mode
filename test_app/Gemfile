@@ -39,7 +39,7 @@ end
 # gem 'jbuilder'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Deploy with Capistrano
 # gem 'capistrano'
@@ -56,3 +56,4 @@ gem 'edit_mode', path: '../'
 
 # In-place editing (To show that this gem integrates best_in_place out of the box.)
 gem 'best_in_place'
+gem 'redcarpet'

@@ -50,9 +50,8 @@ gem 'unicorn'
 gem "mocha", :group => :test
 
 # Edit Mode (This is the gem to demonstrate here.)
-#gem 'edit_mode', git: 'git://github.com/fiedl/edit_mode.git'
-gem 'edit_mode', path: '../'
-
+gem 'edit_mode', git: 'git://github.com/fiedl/edit_mode.git'
+#gem 'edit_mode', path: '../'
 
 # In-place editing (To show that this gem integrates best_in_place out of the box.)
 gem 'best_in_place'

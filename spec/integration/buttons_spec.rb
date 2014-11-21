@@ -30,12 +30,12 @@ describe "button behaviour", js: true do
   describe "edit button" do
 
     it "should be visible outside and invisible in edit mode" do
-      page.should have_selector( ".edit_button", visible: true, count: 2 )
+      page.should have_selector( ".edit_button", visible: true, count: 3 )
       click_on 'edit'
-      page.should have_selector( ".edit_button", visible: true, count: 1 )
-      page.should_not have_selector( ".edit_button", visible: true, count: 2 )
-      click_on 'cancel'
       page.should have_selector( ".edit_button", visible: true, count: 2 )
+      page.should_not have_selector( ".edit_button", visible: true, count: 3 )
+      click_on 'cancel'
+      page.should have_selector( ".edit_button", visible: true, count: 3 )
     end
 
     it "should activate the edit mode" do

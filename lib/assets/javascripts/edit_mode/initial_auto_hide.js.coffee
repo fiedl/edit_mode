@@ -13,4 +13,3 @@ ready = ->
   $( document ).apply_initial_auto_hide()
 
 $(document).ready(ready)
-$(document).on('page:load', ready)

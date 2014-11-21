@@ -32,4 +32,3 @@ ready = ->
   $( document ).apply_show_only_in_edit_mode()
 
 $(document).ready(ready)
-$(document).on('page:load', ready)

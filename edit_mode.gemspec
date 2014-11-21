@@ -23,7 +23,8 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency "rails", ">= 3.2"
   gem.add_dependency "jquery-rails"
-  
+  gem.add_dependency 'jquery-turbolinks'
+    
   gem.add_development_dependency "rake"
   gem.add_development_dependency "rspec-rails", ">= 2.8.0"
   gem.add_development_dependency "nokogiri", ">= 1.5.0"

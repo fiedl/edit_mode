@@ -36,8 +36,11 @@ Or install it yourself as:
 In `app/assets/javascripts/application.js`, add:
 
 ```javascript
+//= require jquery.turbolinks
 //= require edit_mode
 ```
+
+If you experience trouble with javascript, check the correct loading order from [the jquery.turbolinks README](https://github.com/kossnocorp/jquery.turbolinks#usage).
 
 In `app/assets/stylesheets/application.css`, add:
 

@@ -32,3 +32,4 @@ gem 'jquery-ui-rails'
 
 gem 'coffee-rails'
 gem 'sqlite3'
+gem 'launchy'

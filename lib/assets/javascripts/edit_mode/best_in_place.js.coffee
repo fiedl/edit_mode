@@ -32,4 +32,3 @@ ready = ->
         $( this ).closest( ".edit_mode_group" ).trigger( "save" )
 
 $(document).ready(ready)
-$(document).on('page:load', ready)

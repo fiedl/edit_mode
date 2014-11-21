@@ -1,6 +1,5 @@
 rvm:
-  - 1.9.2
-  - 2.0.0
+  - 2.1.2
 
 #env: "RAILS_ENV=test DISPLAY=:99.0"
 

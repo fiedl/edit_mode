@@ -11,15 +11,15 @@ ready = ->
     this.find( ".edit_button" ).addClass( "do_not_show_in_edit_mode editable" )
     
     # The buttons trigger the correspondig events of the surrounding edit_mode_group.
-    this.on( "click", ".edit_button", (e) ->
+    this.off("click", ".edit_button").on("click", ".edit_button", (e) ->
       $( this ).closest( ".edit_mode_group" ).trigger( "edit" )
       e.preventDefault()
     )
-    this.on( "click", ".save_button", (e) ->
+    this.off("click", ".save_button").on("click", ".save_button", (e) ->
       $( this ).closest( ".edit_mode_group" ).trigger( "save" )
       e.preventDefault()
     )
-    this.on( "click", ".cancel_button", (e) ->
+    this.off("click", ".cancel_button").on("click", ".cancel_button", (e) ->
       $( this ).closest( ".edit_mode_group" ).trigger( "cancel" )
       e.preventDefault()
     )

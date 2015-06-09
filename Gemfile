@@ -31,5 +31,7 @@ gem 'jquery-rails', '>=2.2.0'
 gem 'jquery-ui-rails'
 
 gem 'coffee-rails'
-gem 'sqlite3'
+gem 'sqlite3', '>= 1.3.10'
 gem 'launchy'
+
+gem 'eventmachine', '>= 1.0.7'

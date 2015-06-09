@@ -3,6 +3,7 @@ ready = ->
   jQuery.fn.apply_best_in_place = ->
     this.best_in_place()
         .addClass( "editable ")
+        .unbind("edit")
         .bind( "edit", (e) ->
           $( this ).data( 'bestInPlaceEditor' ).activate()
           $( this ).find( "*" ).unbind( 'blur' )
@@ -12,10 +13,12 @@ ready = ->
                                .bind( 'keyup', keyUpHandler )
           e.stopPropagation()
         )
+        .unbind("cancel")
         .bind( "cancel", (e) ->
           $( this ).data( 'bestInPlaceEditor' ).abort()
           e.stopPropagation()
         )
+        .unbind("save")
         .bind( "save", (e) ->
           $( this ).data( 'bestInPlaceEditor' ).update()
           e.stopPropagation()

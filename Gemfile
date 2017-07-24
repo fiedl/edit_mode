@@ -34,4 +34,5 @@ gem 'coffee-rails'
 gem 'sqlite3', '>= 1.3.10'
 gem 'launchy'
 
-gem 'eventmachine', '>= 1.0.7'
+gem 'eventmachine', '>= 1.2.3'
+gem 'json', '>= 1.8.6'

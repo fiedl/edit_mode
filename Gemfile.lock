@@ -9,7 +9,7 @@ GIT
 PATH
   remote: .
   specs:
-    edit_mode (1.0.2)
+    edit_mode (1.0.3)
       jquery-rails
       jquery-turbolinks
       rails (>= 3.2)
@@ -65,7 +65,7 @@ GEM
     coffee-script-source (1.6.3)
     diff-lcs (1.1.3)
     erubis (2.7.0)
-    eventmachine (1.0.7)
+    eventmachine (1.2.3)
     execjs (2.0.2)
     faye-websocket (0.4.7)
       eventmachine (>= 0.12.0)
@@ -87,7 +87,7 @@ GEM
       turbolinks
     jquery-ui-rails (4.1.0)
       railties (>= 3.1.0)
-    json (1.8.1)
+    json (1.8.6)
     launchy (2.4.3)
       addressable (~> 2.3)
     libv8 (3.16.14.3)
@@ -170,8 +170,9 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    turbolinks (2.5.3)
-      coffee-rails
+    turbolinks (5.0.1)
+      turbolinks-source (~> 5)
+    turbolinks-source (5.0.3)
     tzinfo (0.3.38)
     websocket (1.0.7)
     xpath (0.1.4)
@@ -185,12 +186,13 @@ DEPENDENCIES
   capybara (= 1.1.2)
   coffee-rails
   edit_mode!
-  eventmachine (>= 1.0.7)
+  eventmachine (>= 1.2.3)
   execjs
   guard (= 1.0.1)
   guard-rspec (= 0.5.5)
   jquery-rails (>= 2.2.0)
   jquery-ui-rails
+  json (>= 1.8.6)
   launchy
   nokogiri
   poltergeist
@@ -203,3 +205,6 @@ DEPENDENCIES
   sass-rails
   sqlite3 (>= 1.3.10)
   therubyracer
+
+BUNDLED WITH
+   1.15.2

@@ -32,15 +32,15 @@ $( document ).on( "cancel", ".edit_mode_group", ->
 
     edit_mode_group = $( this )
     cancel_button = $( this ).find( ".cancel_button" )
-    
+
     # if there is a cancel button, animate it and then cancel all elements.
-    if cancel_button.size() > 0  
+    if cancel_button.length > 0
       button_effect( cancel_button, ->
         edit_mode_group.find( ".editable" ).trigger( "cancel" )
       )
-      
+
     # if no cancel button exists, just trigger each element's cancel event.
-    else  
+    else
       edit_mode_group.find( ".editable" ).trigger( "cancel" )
 
 )

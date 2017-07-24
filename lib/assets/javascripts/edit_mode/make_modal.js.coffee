@@ -5,7 +5,7 @@
 # If the user clicks on the shaded (grey) area outside, the edit_mode_group is saved.
 
 $( document ).on( "edit", ".edit_mode_group", ->
-  if $( document ).find( ".edit-mode-modal" ).size() == 0
+  if $( document ).find( ".edit-mode-modal" ).length == 0
     #unless $( this ).hasClass( "edit-mode-modal" )
     modal_edit_mode_group = $( this )
     $( this ).addClass( "edit-mode-modal" )

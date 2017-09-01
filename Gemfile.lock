@@ -9,7 +9,7 @@ GIT
 PATH
   remote: .
   specs:
-    edit_mode (1.0.4)
+    edit_mode (1.0.5)
       jquery-rails
       jquery-turbolinks
       rails (>= 3.2)

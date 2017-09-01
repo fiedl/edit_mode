@@ -38,7 +38,7 @@ $(document).ready ->
 
   new_value = (best_in_place)->
     v = best_in_place.find('input').val() if best_in_place.find('input').length > 0
-    v = best_in_place.find('textarea').text() if best_in_place.find('textarea').length > 0
+    v = best_in_place.find('textarea').val() if best_in_place.find('textarea').length > 0
     v = best_in_place.find('select').find(":selected").text() if best_in_place.find('select').length > 0
     v = null if v == ""
     return v

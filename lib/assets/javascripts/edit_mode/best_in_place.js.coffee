@@ -1,4 +1,17 @@
-ready = ->
+old_value = (best_in_place)->
+  if best_in_place.data('bip-original-content')?
+    best_in_place.data('bip-original-content')
+  else
+    null
+
+new_value = (best_in_place)->
+  v = best_in_place.find('input').val() if best_in_place.find('input').length > 0
+  v = best_in_place.find('textarea').text() if best_in_place.find('textarea').length > 0
+  v = best_in_place.find('select').find(":selected").text() if best_in_place.find('select').length > 0
+  v = null if v == ""
+  return v
+
+$(document).ready ->
 
   jQuery.fn.apply_best_in_place = ->
     this.best_in_place()
@@ -20,7 +33,10 @@ ready = ->
         )
         .unbind("save")
         .bind( "save", (e) ->
-          $( this ).data( 'bestInPlaceEditor' ).update()
+          if String(old_value($(this))) != String(new_value($(this)))
+            $(this).data('bestInPlaceEditor').update()
+          else
+            $(this).data('bestInPlaceEditor').abort()
           e.stopPropagation()
         )
     return this
@@ -34,4 +50,3 @@ ready = ->
       unless $( event.target ).is( "textarea" )
         $( this ).closest( ".edit_mode_group" ).trigger( "save" )
 
-$(document).ready(ready)

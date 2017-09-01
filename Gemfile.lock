@@ -9,7 +9,7 @@ GIT
 PATH
   remote: .
   specs:
-    edit_mode (1.0.3)
+    edit_mode (1.0.4)
       jquery-rails
       jquery-turbolinks
       rails (>= 3.2)
@@ -207,4 +207,4 @@ DEPENDENCIES
   therubyracer
 
 BUNDLED WITH
-   1.15.2
+   1.15.4

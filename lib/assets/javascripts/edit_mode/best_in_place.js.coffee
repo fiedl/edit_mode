@@ -1,16 +1,3 @@
-old_value = (best_in_place)->
-  if best_in_place.data('bip-original-content')?
-    best_in_place.data('bip-original-content')
-  else
-    null
-
-new_value = (best_in_place)->
-  v = best_in_place.find('input').val() if best_in_place.find('input').length > 0
-  v = best_in_place.find('textarea').text() if best_in_place.find('textarea').length > 0
-  v = best_in_place.find('select').find(":selected").text() if best_in_place.find('select').length > 0
-  v = null if v == ""
-  return v
-
 $(document).ready ->
 
   jQuery.fn.apply_best_in_place = ->
@@ -43,10 +30,22 @@ $(document).ready ->
 
   $( ".best_in_place" ).apply_best_in_place()
 
+  old_value = (best_in_place)->
+    if best_in_place.data('bip-original-content')?
+      best_in_place.data('bip-original-content')
+    else
+      null
+
+  new_value = (best_in_place)->
+    v = best_in_place.find('input').val() if best_in_place.find('input').length > 0
+    v = best_in_place.find('textarea').text() if best_in_place.find('textarea').length > 0
+    v = best_in_place.find('select').find(":selected").text() if best_in_place.find('select').length > 0
+    v = null if v == ""
+    return v
+
   keyUpHandler = (event) ->
     if event.keyCode == 27
       $( this ).closest( ".edit_mode_group" ).trigger( "cancel" )
     if event.keyCode == 13
       unless $( event.target ).is( "textarea" )
         $( this ).closest( ".edit_mode_group" ).trigger( "save" )
-
